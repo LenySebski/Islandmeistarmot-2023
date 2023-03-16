@@ -61,30 +61,16 @@ export const signInValidation = [
 ];
 
 export const createPostValidation = [
-	body("title")
-		.escape()
-		.optional({ checkFalsy: true })
-		.isString()
-		.withMessage("Title must be a string"),
-	body("content")
-		.escape()
-		.optional({ checkFalsy: true })
-		.isString()
-		.withMessage("Content must be a string"),
+	body("title").escape().isString().withMessage("Title must be a string"),
+	body("content").escape().isString().withMessage("Content must be a string"),
 	body("district")
 		.escape()
-		.optional({ checkFalsy: true })
 		.trim()
 		.isLength({ min: 3, max: 3 })
 		.withMessage("District (postal code) must be 3 characters long"),
-	body("address")
-		.escape()
-		.optional({ checkFalsy: true })
-		.isString()
-		.withMessage("Address must be a string"),
+	body("address").escape().isString().withMessage("Address must be a string"),
 	body("endTime")
 		.escape()
-		.optional({ checkFalsy: true })
 		.isISO8601()
 		.withMessage("End time must be a valid ISO 8601 date - YYYY-MM-DD"),
 ];
