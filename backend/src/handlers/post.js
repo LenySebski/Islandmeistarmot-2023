@@ -45,6 +45,8 @@ export const createPost = async (req, res, next) => {
 				content: req.body?.content,
 				district: req.body?.district,
 				postedById: req.user.id,
+				address: req.body?.address,
+				endTime: req.body?.endTime,
 			},
 		});
 		res.status(201);
@@ -90,6 +92,8 @@ export const updatePost = async (req, res, next) => {
 				title: req.body?.title,
 				content: req.body?.content,
 				district: req.body?.district,
+				address: req.body?.address,
+				endTime: req.body?.endTime,
 				postedById: req.user.id,
 			},
 		});

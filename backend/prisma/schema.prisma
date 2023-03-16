@@ -36,6 +36,8 @@ model Post {
   postedById String   
   title       String
   content  String?  @db.VarChar(255)
+  endTime  String? @db.VarChar(255)
+  address  String?  @db.VarChar(255)
   district     String?  @db.VarChar(255)
  
   @@unique([id, postedById])

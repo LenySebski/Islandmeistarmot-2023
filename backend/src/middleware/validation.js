@@ -77,4 +77,14 @@ export const createPostValidation = [
 		.trim()
 		.isLength({ min: 3, max: 3 })
 		.withMessage("District (postal code) must be 3 characters long"),
+	body("address")
+		.escape()
+		.optional({ checkFalsy: true })
+		.isString()
+		.withMessage("Address must be a string"),
+	body("endTime")
+		.escape()
+		.optional({ checkFalsy: true })
+		.isISO8601()
+		.withMessage("End time must be a valid ISO 8601 date - YYYY-MM-DD"),
 ];
