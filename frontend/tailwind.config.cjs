@@ -5,6 +5,7 @@ module.exports = {
 		fontFamily: {
 			display: ["Oswald", "sans-serif"],
 			body: ["Nunito", "sans-serif"],
+			logo: ["Permanent Marker", "cursive"],
 		},
 	},
 	plugins: [],

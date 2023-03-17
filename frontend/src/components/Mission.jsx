@@ -1,6 +1,9 @@
 export default function Mission() {
 	return (
-		<div className='bg-white py-24 px-6 sm:py-32 lg:px-8' id='Mission'>
+		<div
+			className='bg-white py-24 px-6 sm:py-[35vh] lg:px-8 md:h-[100vh]'
+			id='Mission'
+		>
 			<div className='mx-auto max-w-2xl text-center'>
 				<h2 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
 					Our mission
