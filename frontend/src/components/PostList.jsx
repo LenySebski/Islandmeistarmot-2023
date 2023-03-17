@@ -6,7 +6,7 @@ export const PostList = () => {
 	);
 
 	return (
-		<div className='post__list'>
+		<div className='h-[100vh] pt-20'>
 			{isLoading && <div>Loading...</div>}
 			{error && <div>Error: {error.message}</div>}
 			{data &&

@@ -5,7 +5,7 @@ import Mission from "../components/Mission";
 
 export const HomePage = () => {
 	return (
-		<div className='layout__wrapper--home'>
+		<div className='snap-y snap-proximity'>
 			<HeroSection />
 			<Intro />
 			<HeroImage />

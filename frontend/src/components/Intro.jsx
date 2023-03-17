@@ -1,12 +1,12 @@
 export default function Intro() {
 	return (
-		<div className='bg-gray-900 py-24 sm:py-32'>
+		<div className='bg-gray-900 sm:py-32 sm:h-[100vh] snap-start'>
 			<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-				<div className='mx-auto max-w-2xl lg:mx-0'>
-					<h2 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-						How it works
+				<div className='mx-auto max-w-2xl lg:mx-0 py-24'>
+					<h2 className='text-4xl font-semibold tracking-widest text-white sm:text-6xl font-display'>
+						How it works ?
 					</h2>
-					<p className='mt-6 text-lg leading-8 text-gray-300'>
+					<p className='mt-14 text-lg leading-10 text-gray-300 font-body'>
 						Bite Buddy is the food sharing app that connects individuals
 						with excess food to those who are in need. Whether you have
 						extra groceries, leftovers from a party, or just an abundance

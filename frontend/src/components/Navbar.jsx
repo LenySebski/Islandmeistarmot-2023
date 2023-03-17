@@ -9,13 +9,13 @@ function Navbar() {
 
 	const { user, setUser } = useContext(UserContext);
 	return (
-		<header className='absolute inset-x-0 top-0 z-50'>
+		<header className='absolute inset-x-0 top-0 z-50 bg-black/80 '>
 			<nav
 				className='flex items-center justify-between p-6 lg:px-8'
 				aria-label='Global'
 			>
 				<div className='flex lg:flex-1'>
-					<a href='#' className='-m-1.5 p-1.5'>
+					<a href='/' className='-m-1.5 p-1.5'>
 						<span className='text-white font-logo text-3xl'>
 							Bite Buddy
 						</span>
@@ -57,8 +57,10 @@ function Navbar() {
 				<div className='fixed inset-0 z-50' />
 				<Dialog.Panel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10'>
 					<div className='flex items-center justify-between'>
-						<a href='#' className='-m-1.5 p-1.5'>
-							<span className='text-4xl font-logo'>Bite Buddy</span>
+						<a href='/' className='-m-1.5 p-1.5'>
+							<span className='text-4xl font-logo text-white'>
+								Bite Buddy
+							</span>
 						</a>
 						<button
 							type='button'
@@ -71,7 +73,7 @@ function Navbar() {
 					</div>
 					<div className='mt-6 flow-root'>
 						<div className='-my-6 divide-y divide-gray-500/25'>
-							<div className='space-y-2 py-6'>
+							<div className='space-y-2 py-6 text-white'>
 								<Link to='/database'>Find a Bite</Link>
 								{user && <Link to='/newpost'>Post a Bite</Link>}
 							</div>
@@ -81,10 +83,10 @@ function Navbar() {
 										Logout
 									</a>
 								) : (
-									<>
+									<div className='flex flex-col'>
 										<Link to='/login'>Sign In</Link>
 										<Link to='/signup'>Sign Up!</Link>
-									</>
+									</div>
 								)}
 							</div>
 						</div>

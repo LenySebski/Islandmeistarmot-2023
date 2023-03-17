@@ -102,9 +102,9 @@ export default function Footer() {
 							))}
 						</div>
 					</div>
-					<div className='md:grid md:grid-cols-2 md:gap-32 ml-auto '>
+					<div className='md:grid md:grid-cols-2 md:gap-32 ml-auto px-20 '>
 						<div>
-							<h3 className='text-sm font-semibold leading-6 text-white'>
+							<h3 className='text-sm font-semibold leading-6 text-white place-self-center'>
 								Menu
 							</h3>
 							<ul role='list' className='mt-6 space-y-4'>
