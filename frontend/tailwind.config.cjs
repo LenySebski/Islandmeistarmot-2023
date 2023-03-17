@@ -8,5 +8,7 @@ module.exports = {
 			logo: ["Permanent Marker", "cursive"],
 		},
 	},
-	plugins: [],
+	plugins: [
+		// require('@tailwindcss/forms'),
+	],
 };

@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
+import { LockClosedIcon } from '@heroicons/react/20/solid'
+
 
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
@@ -33,7 +35,7 @@ const LoginForm = () => {
 
 
 	return (
-		<div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+		<div className="flex h-[100vh] items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
 			<div className="w-full max-w-md space-y-8">
 				<h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 font-logo">Bite Buddy</h2>
 				<p className="mt-2 text-center text-sm text-gray-600">Share your food, share your love!</p>
@@ -60,6 +62,7 @@ const LoginForm = () => {
 							onChange={(e) => setPassword(e.target.value)}
 							placeholder="Password"
 						/>
+						
 					</div>
 				<div className="flex items-center justify-between">
 					<div className="flex items-center">
@@ -80,7 +83,12 @@ const LoginForm = () => {
 						</a>
 					</div>
 				</div>
-					<button className='group relative flex w-full justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Sign in!</button>
+					<button className='group relative flex w-full justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+						<span className="absolute inset-y-0 left-0 flex items-center pl-3">
+							<LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
+						</span>
+						Sign in!
+					</button>
 					{error && (
 						<div className='form__error-container'>
 							<span className='form__error-text'>{error.message}</span>
