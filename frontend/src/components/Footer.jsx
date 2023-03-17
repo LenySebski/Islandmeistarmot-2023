@@ -1,4 +1,3 @@
-import Logo from "../Images/Logo.png";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
@@ -12,7 +11,6 @@ function Footer() {
 	return (
 		<footer className='footer__wrapper'>
 			<div className='footer__column1'>
-				<img className='footer__logo-image' src={Logo}></img>
 				<p className='footer__description'>
 					CATalog is a website dedicated to helping cat owners find their
 					lost pets. Whether you are an owner looking for a beloved cat or
