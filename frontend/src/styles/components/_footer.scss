@@ -1,0 +1,62 @@
+@use "../abstracts/colors" as colors;
+
+.footer {
+	&__wrapper {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 6rem;
+		background-color: colors.color(secondary);
+		color: colors.color(white);
+		padding: 4rem 2rem 6rem;
+	}
+	&__column1 {
+		max-width: 300px;
+		padding-left: 4rem;
+	}
+	&__logo-image {
+		padding-bottom: 2rem;
+	}
+	&__description {
+		font-size: 1.4rem;
+		font-weight: 100;
+	}
+	&__column2 {
+		max-width: 300px;
+		justify-content: left;
+		a {
+			font-size: 14px;
+			font-weight: 100;
+			color: colors.color(white);
+			display: block;
+			margin: 1rem 0;
+			text-decoration: none;
+		}
+	}
+	&__header {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		letter-spacing: 0.2rem;
+	}
+	&__column3 {
+		padding: 5px;
+		margin-right: 4rem;
+		text-align: end;
+		:nth-child(2) {
+			display: block;
+			font-weight: 100;
+			letter-spacing: 0.2rem;
+			margin: 0.5rem 0;
+			text-decoration: none;
+			color: colors.color(white);
+		}
+	}
+
+	&__social {
+		font-size: 3rem;
+		color: colors.color(white);
+		padding: 5px;
+	}
+}

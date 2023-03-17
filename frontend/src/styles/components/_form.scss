@@ -1,0 +1,112 @@
+@use "../abstracts/colors" as colors;
+@use "../abstracts/variables" as variables;
+.form {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		width: 70%;
+		height: 50%;
+		padding: 2rem;
+		margin: 2rem;
+	}
+	&__header {
+		font-size: 4rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: colors.color(secondary);
+	}
+	&__subheader {
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: rgba(colors.color(secondary), 0.7);
+		margin: 2rem 0;
+	}
+	&__input {
+		width: 100%;
+		padding: 0.5rem;
+		margin: 0.5rem 0 2rem;
+		border: variables.$border-input;
+		border-radius: variables.$border-radius-input;
+		box-shadow: variables.$box-shadow-input;
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: colors.color(secondary);
+		background-color: colors.color(white);
+		outline: none;
+	}
+	&__radio-input {
+		border-radius: 0;
+	}
+	&__radio-label {
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: colors.color(secondary);
+	}
+	&__label {
+		font-size: 1.4rem;
+
+		color: colors.color(secondary);
+	}
+	&__btn--primary {
+		width: 100%;
+		padding: 0.5rem;
+		margin-top: 2rem;
+		border: none;
+		border-radius: variables.$border-radius-input;
+		box-shadow: variables.$box-shadow-input;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		color: colors.color(white);
+		background-color: colors.color(secondary);
+		outline: none;
+		cursor: pointer;
+	}
+	&__error {
+		&-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem 2rem;
+			margin-top: 1rem;
+			border-radius: 0.6rem;
+			border: 1px solid colors.color(error);
+			background-color: rgba(colors.color(error), 0.2);
+			transition: all 0.3s ease;
+		}
+		&-text {
+			font-size: 1rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: colors.color(error);
+		}
+	}
+	&__notification {
+		&-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem 2rem;
+			margin-top: 1rem;
+			border-radius: 0.6rem;
+			border: 1px solid colors.color(secondary);
+			background-color: rgba(colors.color(secondary), 0.2);
+			transition: all 0.3s ease;
+		}
+		&-text {
+			font-size: 1rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: colors.color(secondary);
+		}
+	}
+}
