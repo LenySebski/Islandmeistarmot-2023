@@ -7,10 +7,8 @@ import { UserContext } from "../context/UserContext";
 function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const navigation = [
-		{ name: "Product", href: "#" },
-		{ name: "Features", href: "#" },
-		{ name: "Marketplace", href: "#" },
-		{ name: "Company", href: "#" },
+		{ name: "Find a Bite", href: "#" },
+		{ name: "Post a Bite", href: "#" },
 	];
 	const { user, setUser } = useContext(UserContext);
 	return (
@@ -21,7 +19,7 @@ function Navbar() {
 			>
 				<div className='flex lg:flex-1'>
 					<a href='#' className='-m-1.5 p-1.5'>
-						<span className='text-white'>Bite Buddy</span>
+						<span className='text-white '>Bite Buddy</span>
 					</a>
 				</div>
 				<div className='flex lg:hidden'>
@@ -34,12 +32,12 @@ function Navbar() {
 						<Bars3Icon className='h-6 w-6' aria-hidden='true' />
 					</button>
 				</div>
-				<div className='hidden lg:flex lg:gap-x-12'>
+				<div className='hidden lg:flex lg:gap-x-36'>
 					{navigation.map((item) => (
 						<a
 							key={item.name}
 							href={item.href}
-							className='text-sm font-semibold leading-6 text-white'
+							className='text-lg font-semibold leading-6 text-white'
 						>
 							{item.name}
 						</a>
@@ -51,10 +49,10 @@ function Navbar() {
 							Logout
 						</a>
 					) : (
-						<>
+						<div className='flex gap-16 text-lg font-semibold '>
 							<Link to='/login'>Sign In</Link>
 							<Link to='/signup'>Sign Up!</Link>
-						</>
+						</div>
 					)}
 				</div>
 			</nav>

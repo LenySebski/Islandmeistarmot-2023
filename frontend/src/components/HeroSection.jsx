@@ -1,13 +1,4 @@
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const navigation = [
-	{ name: "Product", href: "#" },
-	{ name: "Features", href: "#" },
-	{ name: "Marketplace", href: "#" },
-	{ name: "Company", href: "#" },
-];
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
 	return (
@@ -43,24 +34,25 @@ export default function HeroSection() {
 						</defs>
 					</svg>
 				</div>
-				<div className='mx-auto max-w-2xl py-32 sm:py-48 lg:h-[100vh]'>
+				<div className='mx-auto max-w-2xl py-32 sm:py-[30vh] h-[100vh]'>
 					<div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
 					<div className='text-center'>
-						<h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
+						<h1 className='text-4xl font-bold  tracking-wide text-white sm:text-6xl'>
 							Share your food,
 							<br />
-							share your love
+							<br />
+							<span className='text-5xl'>share your love</span>
 						</h1>
 						<p className='mt-6 text-lg leading-8 text-gray-300'>
 							with Bite Buddy
 						</p>
 						<div className='mt-10 flex items-center justify-center gap-x-6'>
-							<a
-								href='#'
+							<Link
+								to='newpost'
 								className='rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400'
 							>
 								Get started
-							</a>
+							</Link>
 							<a
 								href='#Mission'
 								className='text-sm font-semibold leading-6 text-white'
