@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
+
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -30,43 +31,70 @@ const LoginForm = () => {
 		}
 	};
 
+
 	return (
-		<div className='flex flex-col justify-center'>
-			<h2 className='text-extrabold text-3xl '>Sign In!</h2>
-			<h3 className='text-lg text-gray-200'>
-				And start reuniting cats and their owners today!
-			</h3>
-			<form onSubmit={handleSubmit} className='flex flex-col'>
-				<label className='form__label'>Username</label>
-				<input
-					className='rounded bg-white shadow-lg p-2'
-					type='text'
-					required
-					value={username}
-					onChange={(e) => setUsername(e.target.value)}
-				/>
-				<label className='text-lg'>Password</label>
-				<input
-					className='rounded bg-white shadow-lg p-2'
-					type='password'
-					required
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				<button className='btn'>Sign in!</button>
-				{error && (
-					<div className='form__error-container'>
-						<span className='form__error-text'>{error.message}</span>
+		<div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+			<div className="w-full max-w-md space-y-8">
+				<h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 font-logo">Bite Buddy</h2>
+				<p className="mt-2 text-center text-sm text-gray-600">Share your food, share your love!</p>
+				<form onSubmit={handleSubmit} className="mt-8 space-y-6">
+				<div className="-space-y-px rounded-md shadow-sm">
+					<div>
+					<label className='sr-only'></label>
+						<input
+							className='relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+							type='text'
+							required
+							value={username}
+							onChange={(e) => setUsername(e.target.value)}
+							placeholder="Username"
+						/>
 					</div>
-				)}
-				{notification && (
-					<div className='form__notification-container'>
-						<span className='form__notification-text'>
-							{notification}
-						</span>
+	
+					<label className='sr-only'></label>
+						<input
+							className='relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+							type='password'
+							required
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+							placeholder="Password"
+						/>
 					</div>
-				)}
-			</form>
+				<div className="flex items-center justify-between">
+					<div className="flex items-center">
+						<input
+						id="remember-me"
+						name="remember-me"
+						type="checkbox"
+						className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+						/>
+						<label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+						Remember me
+						</label>
+					</div>
+
+					<div className="text-sm">
+						<a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+						Forgot your password?
+						</a>
+					</div>
+				</div>
+					<button className='group relative flex w-full justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Sign in!</button>
+					{error && (
+						<div className='form__error-container'>
+							<span className='form__error-text'>{error.message}</span>
+						</div>
+					)}
+					{notification && (
+						<div className='form__notification-container'>
+							<span className='form__notification-text'>
+								{notification}
+							</span>
+						</div>
+					)}
+				</form>
+			</div>
 		</div>
 	);
 };
