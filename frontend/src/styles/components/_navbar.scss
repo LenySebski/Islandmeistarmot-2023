@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as colors;
+.navbar {
+	&__wrapper {
+		background-color: colors.color(secondary);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 10vh;
+		background-color: colors.color(secondary);
+		color: colors.color(secondary);
+		font-size: 20px;
+	}
+	&__logo-image {
+		margin-left: 4rem;
+	}
+	&__container {
+		display: flex;
+		flex-direction: row;
+		margin-right: 4rem;
+		height: 80%;
+		a {
+			transition: all 0.3s ease;
+			text-decoration: none;
+			color: colors.color(primary);
+			margin: auto 2rem;
+			text-transform: uppercase;
+		}
+		a:last-child {
+			font-weight: 700;
+			margin-left: 0;
+			padding-left: 2rem;
+			border-left: colors.color(primary) solid 1px;
+			line-height: 5rem;
+		}
+		a:hover {
+			color: colors.color(white);
+		}
+	}
+}
